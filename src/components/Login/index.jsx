@@ -1,8 +1,8 @@
-import {  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Login = () => {
-    let navigate = useNavigate(); 
+  let navigate = useNavigate();
 
   const onClickSignIn = (event) => {
     event.preventDefault();
@@ -12,27 +12,31 @@ const Login = () => {
   return (
     <>
       <header className="login-header">
-        <img
-          src="https://res.cloudinary.com/dv0oedkxm/image/upload/v1706535340/Logo_and_company_ciitcr.png"
-          alt="company-name-and-logo"
-        />
+        <Link to="/">
+          <img
+            src="https://res.cloudinary.com/dv0oedkxm/image/upload/v1706535340/Logo_and_company_ciitcr.png"
+            alt="company-name-and-logo"
+          />
+        </Link>
       </header>
       <section className="login-desktop-view">
         <section className="desktop-left-section">
-          <svg
-            width="87"
-            height="81"
-            viewBox="0 0 87 81"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="44.1102" cy="40.3929" r="40.0765" fill="#FCFCFF" />
-            <path
-              d="M2.02979 37.0531L32.0871 51.7478L58.8048 29.7058L84.8545 43.0646"
-              stroke="#605BFF"
-              strokeWidth="6"
-            />
-          </svg>
+          <Link to="/">
+            <svg
+              width="87"
+              height="81"
+              viewBox="0 0 87 81"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="44.1102" cy="40.3929" r="40.0765" fill="#FCFCFF" />
+              <path
+                d="M2.02979 37.0531L32.0871 51.7478L58.8048 29.7058L84.8545 43.0646"
+                stroke="#605BFF"
+                strokeWidth="6"
+              />
+            </svg>
+          </Link>
           <h1 className="left-part-company-name">BASE</h1>
           <div className="icons-section">
             <svg

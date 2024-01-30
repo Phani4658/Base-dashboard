@@ -14,7 +14,7 @@ const Header = () => {
             <h1 className="page-heading">Upload CSV</h1>
         </div>
       <div className="left-part">
-        <HiOutlineBars3 className="icon" onClick={(e) => {setOpenNav(true)}} />
+        <HiOutlineBars3 className="icon" onClick={() => {setOpenNav(true)}} />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="26"

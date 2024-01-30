@@ -1,6 +1,7 @@
 import "./index.css";
 import { IoClose } from "react-icons/io5";
 
+// eslint-disable-next-line react/prop-types
 const Sidebar = ({openNav,setOpenNav}) => {
   const sidebarClasses = `sidebar mobile-view-nav ${openNav ? 'show-nav': 'hide-nav'}`;
   return (
