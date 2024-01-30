@@ -1,6 +1,14 @@
+import {  useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Login = () => {
+    let navigate = useNavigate(); 
+
+  const onClickSignIn = (event) => {
+    event.preventDefault();
+    return navigate("/upload");
+  };
+
   return (
     <>
       <header className="login-header">
@@ -108,7 +116,7 @@ const Login = () => {
                 Sign in with Apple
               </button>
             </div>
-            <form className="sign-in-details-form">
+            <form className="sign-in-details-form" onSubmit={onClickSignIn}>
               <div className="input-container">
                 <label htmlFor="email" className="input-label">
                   Email address
