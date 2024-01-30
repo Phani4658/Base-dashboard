@@ -22,6 +22,8 @@
 .links {
   text-decoration: underline;
   color: #605bff;
+  min-width: 120px;
+  word-wrap:break-word;
 }
 
 .select-menu {

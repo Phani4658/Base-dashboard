@@ -21,7 +21,14 @@ const UploadedItem = (props) => {
         <p className="uploaded-item-card-heading desktop-view">
           {id < 10 ? `0${id}` : id}
         </p>
-        <a className="uploaded-item-card-heading links">{link}</a>
+        <a
+          className="uploaded-item-card-heading links"
+          // eslint-disable-next-line react/prop-types
+          href={link.startsWith('http') ? link : `https://${link}`}
+          target="_blank" rel="noopener noreferrer"
+        >
+          {link}
+        </a>
         <p className="uploaded-item-card-heading">{prefix}</p>
         <div className="select-menu">
           <div className="select-btn" onClick={handleSelectClick}>
