@@ -17,7 +17,7 @@ const Login = () => {
           alt="company-name-and-logo"
         />
       </header>
-      <section className="desktop-view">
+      <section className="login-desktop-view">
         <section className="desktop-left-section">
           <svg
             width="87"
