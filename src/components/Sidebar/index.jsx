@@ -1,9 +1,10 @@
 import "./index.css";
 import { IoClose } from "react-icons/io5";
 
-const Sidebar = () => {
+const Sidebar = ({openNav,setOpenNav}) => {
+  const sidebarClasses = `sidebar mobile-view-nav ${openNav ? 'show-nav': 'hide-nav'}`;
   return (
-    <nav className="sidebar">
+    <nav className={sidebarClasses}>
       <div className="logo-and-close">
         <div className="logo-and-name">
           <svg
@@ -22,7 +23,7 @@ const Sidebar = () => {
           </svg>
           <p className="sidebar-company-name">Base</p>
         </div>
-        <IoClose className="close-button" />
+        <IoClose className="close-button" onClick={() => setOpenNav(false)} />
       </div>
 
       <ul className="options">

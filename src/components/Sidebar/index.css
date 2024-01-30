@@ -1,54 +1,52 @@
-.logo-and-close{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo-and-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-ul{
-    margin: 0;
-    padding: 0;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-.options{
-    margin-top: 29px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+.options {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
-
-.invoice-text{
-    padding-bottom: 3px;
+.invoice-text {
+  padding-bottom: 3px;
 }
 
-
-.sidebar-links-button{
-    display: flex;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    align-items: center;
-    font-family: Nunito;
-    font-size: 16px;
-    font-weight: 600;
-    color: #9A9AA9;
-    margin: 24px 0;
-    gap: 14px;
+.sidebar-links-button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  align-items: center;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  color: #9a9aa9;
+  margin: 24px 0;
+  cursor: pointer;
+  gap: 14px;
 }
 
-.svg-fill{
-    color: #9A9AA9;
+.svg-fill {
+  color: #9a9aa9;
 }
 
-
-.selected-button{
-    color: #605BFF;
-    fill: #605BFF !important;
+.selected-button {
+  color: #605bff;
+  fill: #605bff !important;
 }
 
 @media screen and (min-width: 980px) {
@@ -58,7 +56,7 @@ li{
     padding: 51px 31px;
   }
 
-  .logo-and-close{
+  .logo-and-close {
     justify-content: center;
   }
 
@@ -76,7 +74,44 @@ li{
     margin: 0;
   }
 
-  .close-button{
+  .close-button {
     display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .mobile-view-nav {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px 34px;
+    z-index: 2000;
+    width: 300px;
+  }
+
+  .hide-nav{
+    left: -300px;
+    transition: 0.5s;
+  }
+
+
+  .show-nav{
+    left: 0;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+
+
+
+  .logo-and-name {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-family: "Nunito";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
   }
 }

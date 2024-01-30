@@ -1,16 +1,20 @@
 import "./index.css";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { FaRegBell } from "react-icons/fa6";
+import Sidebar from "../Sidebar"
+import { useState } from "react";
 
 
 const Header = () => {
+  const [openNav,setOpenNav] = useState(false);
+
   return (
     <header className="header">
         <div className="desktop-left-part">
             <h1 className="page-heading">Upload CSV</h1>
         </div>
       <div className="left-part">
-        <HiOutlineBars3 className="icon" />
+        <HiOutlineBars3 className="icon" onClick={(e) => {setOpenNav(true)}} />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="26"
@@ -26,6 +30,7 @@ const Header = () => {
           />
         </svg>
         <p className="company-name">Base</p>
+        <Sidebar className="mobile-view mobile-view-nav" openNav={openNav} setOpenNav={setOpenNav} />
       </div>
       <div className="right-part">
         <FaRegBell className="icon" />
